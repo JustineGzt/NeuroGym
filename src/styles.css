@@ -1,0 +1,12 @@
+﻿/* cssremint: ignore */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f5f4f0;
+  color: #1d3557;
+  font-family: 'Inter', sans-serif; /* Si tu as Inter installé, sinon la police par défaut */
+  margin: 0;
+  padding: 0;
+}
