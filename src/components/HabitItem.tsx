@@ -12,15 +12,13 @@ export const HabitItem: React.FC<HabitItemProps> = ({ icon, title, streak, initi
   const [completed, setCompleted] = useState(initialCompleted);
 
   return (
-    <Card className={`mb-3 transition-all duration-300 ${completed ? 'bg-[#2a9d8f]/5 border-[#2a9d8f]/20' : 'bg-white'}`}>
+    <Card className={`mb-3 transition-all duration-300 ${completed ? 'bg-[#2a9d8f]/5 dark:bg-[#2a9d8f]/10 border-[#2a9d8f]/20' : ''}`}>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4">
-          {/* Icône de l'habitude */}
-          <span className="text-2xl p-2 bg-gray-50 rounded-xl">{icon}</span>
+          <span className="text-2xl p-2 bg-gray-50 dark:bg-[#0f1419] rounded-xl">{icon}</span>
           
           <div>
-            {/* Titre de l'habitude (barré si coché) */}
-            <h4 className={`font-bold text-base transition-all ${completed ? 'text-gray-400 line-through' : 'text-[#1d3557]'}`}>
+            <h4 className={`font-bold text-base transition-all ${completed ? 'text-gray-400 line-through' : 'text-[#1d3557] dark:text-[#e2e8f0]'}`}>
               {title}
             </h4>
             {/* Compteur de jours de série (Streak) */}
@@ -34,7 +32,7 @@ export const HabitItem: React.FC<HabitItemProps> = ({ icon, title, streak, initi
           className={`w-7 h-7 rounded-full border-2 flex items-center justify-center transition-all ${
             completed 
               ? 'bg-[#2a9d8f] border-[#2a9d8f] text-white' 
-              : 'border-gray-200 hover:border-gray-400'
+              : 'border-gray-200 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500'
           }`}
         >
           {completed && (

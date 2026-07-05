@@ -1,4 +1,3 @@
-import React from 'react';
 import { Header } from './components/dashboard/Header';
 import { DailyWisdom } from './components/dashboard/DailyWisdom';
 import { GrowthScore } from './components/dashboard/GrowthScore';
@@ -7,7 +6,7 @@ import { UpcomingToday } from './components/dashboard/UpcomingToday';
 
 export default function NeuroGymScreen() {
   return (
-    <div className="pt-4 flex flex-col gap-5">
+    <div className="pt-2 flex flex-col gap-5">
       {/* Barre supérieure avec le message d'accueil et la photo de profil */}
       <Header />
       

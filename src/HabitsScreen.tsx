@@ -1,4 +1,3 @@
-import React from 'react';
 import { WeeklyCalendar } from './components/WeeklyCalendar';
 import { HabitItem } from './components/HabitItem';
 
@@ -13,9 +12,9 @@ export default function HabitsScreen() {
   ];
 
   return (
-    <div className="pt-6">
+    <div className="pt-2">
       <div className="mb-6">
-        <h1 className="text-3xl font-black text-[#1d3557]">Habit Tracker</h1>
+        <h1 className="text-3xl font-black text-[#1d3557] dark:text-[#e2e8f0]">Habit Tracker</h1>
         <p className="text-sm font-medium text-gray-400 mt-1">3 of 6 completed today</p>
       </div>
       <WeeklyCalendar />

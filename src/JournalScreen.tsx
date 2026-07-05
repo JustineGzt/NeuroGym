@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Card } from './components/ui/Card';
 import { Button } from './components/ui/Button';
-import { MoodSelector } from './components/journal/MoodSelector';
+import { MoodSelector } from './components/MoodSelector';
 
 export default function JournalScreen() {
   const [text, setText] = useState("");
@@ -13,13 +13,13 @@ export default function JournalScreen() {
   ];
 
   return (
-    <div className="pt-6">
+    <div className="pt-2">
       <div className="mb-5">
         <p className="text-xs font-bold tracking-wider text-[#2a9d8f] uppercase">Jun 25, 2026</p>
-        <h1 className="text-3xl font-black text-[#1d3557]">Journal</h1>
+        <h1 className="text-3xl font-black text-[#1d3557] dark:text-[#e2e8f0]">Journal</h1>
       </div>
 
-      <div className="w-full bg-[#1d3557] rounded-3xl p-5 text-white bg-gradient-to-br from-[#1d3557] to-[#24426b] mb-5 shadow-sm">
+      <div className="w-full bg-[#1d3557] dark:bg-[#0d1b2a] rounded-3xl p-5 text-white bg-gradient-to-br from-[#1d3557] to-[#24426b] dark:from-[#0d1b2a] dark:to-[#1a2332] mb-5 shadow-sm">
         <p className="text-xs font-bold tracking-wider text-[#2a9d8f] uppercase mb-2">Today's Prompt</p>
         <p className="text-base font-bold leading-relaxed">"What did you learn today that surprised you?"</p>
       </div>
@@ -31,27 +31,27 @@ export default function JournalScreen() {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="Write your reflection here... What challenged you today? What are you proud of?"
-          className="w-full min-h-[120px] outline-none text-sm text-[#1d3557] placeholder-gray-400 resize-none font-medium leading-relaxed"
+          className="w-full min-h-[120px] outline-none text-sm text-[#1d3557] dark:text-[#e2e8f0] bg-transparent placeholder-gray-400 dark:placeholder-gray-500 resize-none font-medium leading-relaxed"
         />
-        <div className="flex justify-between items-center mt-4 pt-3 border-t border-gray-50">
+        <div className="flex justify-between items-center mt-4 pt-3 border-t border-gray-50 dark:border-gray-700/50">
           <span className="text-xs font-semibold text-gray-400">{text.length} chars</span>
           <Button variant="primary" className="!w-auto !py-2 !px-5 !rounded-xl text-sm">Save Entry</Button>
         </div>
       </Card>
 
       <div className="mb-4">
-        <h3 className="text-lg font-bold text-[#1d3557]">Past Reflections</h3>
+        <h3 className="text-lg font-bold text-[#1d3557] dark:text-[#e2e8f0]">Past Reflections</h3>
       </div>
 
       <div className="flex flex-col gap-3">
         {pastReflections.map((item, idx) => (
-          <Card key={idx} className="flex items-center justify-between !p-4 cursor-pointer hover:bg-gray-50/50 transition-colors">
+          <Card key={idx} className="flex items-center justify-between !p-4 cursor-pointer hover:bg-gray-50/50 dark:hover:bg-[#0f1419]/50 transition-colors">
             <div className="flex items-start gap-3">
-              <span className="text-xl p-2 bg-gray-50 rounded-xl mt-1">{item.icon}</span>
+              <span className="text-xl p-2 bg-gray-50 dark:bg-[#0f1419] rounded-xl mt-1">{item.icon}</span>
               <div>
                 <div className="flex items-center gap-2">
-                  <h4 className="font-bold text-sm text-[#1d3557]">{item.date}</h4>
-                  <span className="text-[10px] font-bold text-gray-400 px-2 py-0.5 bg-gray-100 rounded-full">{item.tag}</span>
+                  <h4 className="font-bold text-sm text-[#1d3557] dark:text-[#e2e8f0]">{item.date}</h4>
+                  <span className="text-[10px] font-bold text-gray-400 px-2 py-0.5 bg-gray-100 dark:bg-[#0f1419] rounded-full">{item.tag}</span>
                 </div>
                 <p className="text-xs text-gray-400 font-medium mt-1 line-clamp-1">{item.preview}</p>
               </div>
