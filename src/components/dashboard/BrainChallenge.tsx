@@ -10,12 +10,12 @@ export const BrainChallenge: React.FC = () => {
           {/* Icône Éclair */}
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
         </div>
-        <p className="text-xs font-bold tracking-wider text-gray-500 uppercase">Daily Brain Challenge</p>
+        <p className="text-xs font-bold tracking-wider text-gray-500 uppercase">Défi Cerveau du Jour</p>
       </div>
 
-      <h3 className="text-xl font-bold text-[#1d3557] dark:text-[#e2e8f0] mb-2">Learn 5 New Coding Terms</h3>
+      <h3 className="text-xl font-bold text-[#1d3557] dark:text-[#e2e8f0] mb-2">Apprendre 5 termes de code</h3>
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-5 leading-relaxed">
-        Explore polymorphism, idempotent, recursion, memoization, and closure. Write each in your own words.
+        Explore les concepts suivants : polymorphisme, idempotence, récursion, mémoisation et closure (fermeture). Explique chacun d'eux avec tes propres mots.
       </p>
 
       {/* Barre de progression linéaire */}
@@ -26,7 +26,7 @@ export const BrainChallenge: React.FC = () => {
         <span className="text-xs font-bold text-gray-400">3 / 5</span>
       </div>
 
-      <Button variant="primary">Continue Challenge</Button>
+      <Button variant="primary">Continuer le Défi</Button>
     </Card>
   );
 };

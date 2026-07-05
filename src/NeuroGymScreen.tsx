@@ -3,6 +3,7 @@ import { DailyWisdom } from './components/dashboard/DailyWisdom';
 import { GrowthScore } from './components/dashboard/GrowthScore';
 import { BrainChallenge } from './components/dashboard/BrainChallenge';
 import { UpcomingToday } from './components/dashboard/UpcomingToday';
+import { FocusBlocker } from './components/dashboard/FocusBlocker';
 
 export default function NeuroGymScreen() {
   return (
@@ -21,6 +22,9 @@ export default function NeuroGymScreen() {
       
       {/* La liste des tâches restantes de la journée */}
       <UpcomingToday />
+
+      {/* Limité les reseaux */}
+      <FocusBlocker />
     </div>
   );
 }

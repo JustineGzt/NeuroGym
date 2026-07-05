@@ -6,6 +6,7 @@ import NeuroGymScreen from "./NeuroGymScreen";
 import HabitsScreen from "./HabitsScreen";
 import JournalScreen from "./JournalScreen";
 import CircleScreen from "./CircleScreen";
+import SettingsScreen from "./SettingsScreen";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
             <Route path="/habits" element={<HabitsScreen />} />
             <Route path="/journal" element={<JournalScreen />} />
             <Route path="/circle" element={<CircleScreen />} />
+            <Route path="/setting" element={<SettingsScreen />} />
           </Routes>
         </main>
         <Navbar/>
