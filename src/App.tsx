@@ -7,6 +7,10 @@ import HabitsScreen from "./HabitsScreen";
 import JournalScreen from "./JournalScreen";
 import CircleScreen from "./CircleScreen";
 import SettingsScreen from "./SettingsScreen";
+// Import de ta nouvelle page de contrôle
+import FocusControlScreen from "./FocusControlScreen"; 
+
+import LearningControlScreen from "./LearningControlScreen";
 
 export default function App() {
   return (
@@ -22,6 +26,9 @@ export default function App() {
             <Route path="/journal" element={<JournalScreen />} />
             <Route path="/circle" element={<CircleScreen />} />
             <Route path="/setting" element={<SettingsScreen />} />
+{/* Dashboard d'Apprentissage & Évolution */}
+            <Route path="/learning-control" element={<LearningControlScreen />} />            {/* Nouvelle route pour l'écran de contrôle */}
+            <Route path="/focus-control" element={<FocusControlScreen />} />
           </Routes>
         </main>
         <Navbar/>

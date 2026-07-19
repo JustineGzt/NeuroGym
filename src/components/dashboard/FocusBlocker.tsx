@@ -95,7 +95,7 @@ export const FocusBlocker: React.FC = () => {
           />
           <label htmlFor="bypass" className="text-xs font-medium text-gray-600 dark:text-gray-300 cursor-pointer leading-tight">
             <strong className="text-[#1d3557] dark:text-[#e2e8f0] block mb-0.5">Option "Liberté Matinale"</strong>
-            Débloquer automatiquement si toutes mes tâches du mabtin sont complétées.
+            Débloquer automatiquement si toutes mes tâches du matin sont complétées.
           </label>
         </div>
 
