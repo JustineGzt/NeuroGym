@@ -1,5 +1,7 @@
 import { WeeklyCalendar } from './components/WeeklyCalendar';
 import { HabitItem } from './components/HabitItem';
+import RoutineCalendarScreen from './components/ui/RoutineCalendarScreen';
+
 
 export default function HabitsScreen() {
   const habitsData = [
@@ -18,6 +20,9 @@ export default function HabitsScreen() {
         <p className="text-sm font-medium text-gray-400 mt-1">3 of 6 completed today</p>
       </div>
       <WeeklyCalendar />
+
+      <RoutineCalendarScreen/>
+      
       <div className="flex flex-col">
         {habitsData.map((habit, idx) => (
           <HabitItem key={idx} {...habit} />
